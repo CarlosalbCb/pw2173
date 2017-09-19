@@ -1,0 +1,20 @@
+/*selectores*/
+body{
+	border:1px solid red;
+	width:1024px;
+}
+header{
+	text-align: center;
+}
+header img{
+	float: right;  /*se mueve a la derecha*/
+	width: 90px;
+}
+header nav ul li{
+	background: blue;
+	color: white;
+	margin: 0px 5px 0px 0px;
+	padding: 2px 10px 2px 10px;
+	display: inline-block;
+	border-radius: 5px;
+}
