@@ -1,0 +1,21 @@
+body{
+	margin:0 auto; /*centramos el body*/
+	width:1078px; /*la empresa quiere la pagina de 1078px*/
+	border: 1px solid;
+	font-size: 16px; /*1em*/
+}
+#paint{
+	float:right;
+}
+header input{
+	float: right;
+	margin-right: -200px;
+	position: relative;
+	border: 1px solid black;
+	border-radius: 2px;
+	margin-top: 10px;
+}
+#granthams{
+	margin-top: 20px;
+	margin-left: 15px;
+}
