@@ -2,7 +2,9 @@ body{
 	margin:0 auto; /*centramos el body*/
 	width:1078px; /*la empresa quiere la pagina de 1078px*/
 	border: 1px solid;
-	font-size: 16px; /*1em*/
+	/*font-size: 16px; /*1em*/
+	max-width: 1078px;
+	min-width: 1078px;
 }
 #paint{
 	float:right;
@@ -46,10 +48,68 @@ header nav ul li{
 	margin-left: 20px;
 }
 #seccion01art02{
+	margin-left: 50px;
 	width: 30%;
+}
+#seccion01art02 ul{ /*para modificar el simbolo de los li*/
+	list-style: none;
+}
+#seccion01art02 ul li:before{  /*para modificar el simbolo de los li*/
+	content: "• ";
+	color:#FF0099;
 }
 #bg_offer{
 	position: relative;
 	top: -410px;
 	left: -50px;
 }
+#segundaseccion article{
+	text-align: right;
+	/*font-size: 2em;*/
+	/*margin-right: 135px;*/
+	padding-right: 135px;
+	margin-top: 10px;
+}
+#terceraseccion article{
+	width:22%;
+	display: inline-block;
+	vertical-align: top;
+}
+#terceraseccion article img{
+	vertical-align: middle;  /*coloca en el medio el texto relativo a la imagen*/
+}
+#cuartoArticle{
+	padding-top: 70px;
+
+}
+#cuartoArticle input[type="button"]{
+	background-color: #A3D948;
+	border-radius: 5px;
+	color: white;
+
+}
+.colorRosa{
+	color:#FF0099;   /*imgr.co*/
+}
+.rosaGrande{
+	font-size: 3.5em;
+}
+.nito{
+	font-weight: bold;
+}
+.rosaMediano{
+	font-size: 2em;
+}
+.comunTitulo{
+	font-size: 1.5em;
+}
+.distintoTitulo{
+	font-size: 1.4em;
+}
+.colorAzul{
+  color:#516EAC;
+}
+.colorVerde{
+	color: #A3D948;
+}
+
