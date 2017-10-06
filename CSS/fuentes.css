@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Mouse Memoirs';
+    src: url(Mouse_Memoirs/MouseMemoirs-Regular.ttf);
+}
+h1{
+	/*font-family: 'Julius Sans One', sans-serif;*/
+	font-family: 'Mouse Memoirs', sans-serif;
+}
+
