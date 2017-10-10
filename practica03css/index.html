@@ -13,7 +13,7 @@
 		<img src="img/red1.png" class="derecha"alt="">
 		<!-- <span>Mi THEMA EN HTML5</span> -->
 		<nav>
-			<ul>
+			<ul class="colorMenu">
 				<li>INICIO</li>
 				<li>TUTORIALES</li>
 				<li>VIDEOS</li>
@@ -25,38 +25,43 @@
 		</nav>
 	</header>
 	<main>
-		<section>
-			<article>
+		<section id="seccion1">
+			<article id="seccion1articulo1">
 				<img src="img/slider.jpg" alt="">	
 			</article>
-			<article>
-				<span>Publicidad</span>
-				<img src="img/publicidad.jpg" alt="">
-				<img src="img/publicidad.jpg" alt="">
-				<img src="img/publicidad.jpg" alt="">
-				<img src="img/publicidad.jpg" alt="">
+			<article id="seccion1articulo2">
+				<span class="colorMenu">Publicidad</span>
+				<br>
+				<article id="imgPublicidad">
+					<img src="img/publicidad.jpg" alt="">
+					<img src="img/publicidad.jpg" alt="">
+					<img src="img/publicidad.jpg" alt="">
+					<img src="img/publicidad.jpg" alt="">	
+				</article>
+				
 			</article>
 		</section>
-		<section>
-			<article>
-				<span>Titulo del Post</span>
+		<section id="seccion2">
+			<article id="seccion2articulo1">
+				<span class="textoTitulo">Titulo del Post</span>
+				<br>
 				<img src="img/img-post.jpg" alt="">
 				<span>Por Admin El 30/05/2012. En Pruebas</span>
 				<br>
 				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem porro, ipsam illum. Id, dicta, ducimus aliquam obcaecati repellat nostrum culpa iure impedit modi at, temporibus sequi. Atque sint nisi nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nisi asperiores sit quisquam eos cumque perferendis, quod officia, iste suscipit illo pariatur. Deserunt neque, asperiores delectus nisi similique modi veritatis!</span>
 				<input type="button" value="Leer Mas..">
 			</article>
-			<article>
+			<article id="seccion2articulo2">
 				<nav>
-					Buscador
+					<span class="colorMenu">Buscador</span>
 					<br>
 					<input type="search" placeholder="search...">
 					<button>Go</button>
 					<br>
 				</nav>
-				<nav>
-					Categorias
-					<ul>
+				<nav >
+					<span class="colorMenu">Categorias</span>
+					<ul >
 						<li>categoria 1</li>
 						<li>categoria 2</li>
 						<li>categoria 3</li>
