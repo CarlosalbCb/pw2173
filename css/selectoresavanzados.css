@@ -1,0 +1,66 @@
+/*imagen con atributo alt */
+img[alt]{
+	border: 5px solid blue;
+}
+
+/*imagen con atributo src cadena exacta*/
+img[src="img/alerta.png"]{
+	border-radius: 5px;
+	width: 400px;
+}
+ /*^ = circunflejo*/
+
+ /*Imagen con atriburo src con el inicio de la cadena*/
+img[src^="im"]{
+	width: 150px;
+}
+
+/*Imagen con atributo SRC al final de la cadena*/
+img[src$="png"]{
+	width: 250px;
+}
+/*Imagen con el atributo SRC en cualquier parte de la cadena*/
+img[src*="alerta"]{
+	width: 500px;
+}
+
+/*El caracter ~ indica que estos selectores en este articulo 
+estan separados por espacios*/
+article[class~="resaltado"]{
+	border:2px dashed blue;
+
+}
+article[class~="archivo"]{
+	border:2px dashed red;
+
+}
+article[class~="ingles"]{
+	border:2px dashed green;
+
+}
+/*El atributo id es una lista de valores separados por guiones, pero solo si el 
+valor mas a la izquierda es ingles*/
+article[id|="ingles"]{
+	border: 3px solid gray;
+	text-align: center;
+}
+
+/*selector de secundarios para seleccionar solamente el(los) <p> que se encuentran 
+nmediatamente despues del <div>*/
+div>p{ /*solo los hijos directos*/
+	color:blue;
+}
+
+div p{ /*todos los elementos <p> seran seleccionados*/
+	color: red;
+}
+
+/*Seleccionar solo el elemento <p> que este inmediatamente despues del elemento 
+<h2> "hermano adyacente"*/
+h2+p{
+	color:green;
+}
+/*Seleccionar todos los elementos <p> que esten despues del <h2> "hermano general"*/
+h2 ~ p{
+	color: gray;
+}
