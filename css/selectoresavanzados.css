@@ -64,3 +64,42 @@ h2+p{
 h2 ~ p{
 	color: gray;
 }
+
+/*poner en color rojo los sections menos el id=referencias*/
+#resumen,#experimento,#pruebas,#resultados,#conclusiones{
+	color: red;
+}
+
+/*seleccionar todos menos la que no quiero*/
+section:not(#referencias){
+	color:hotpink;
+}
+
+/*seleccionar elemento LI pares e impares*/
+li:nth-child(odd){  /*impares*/
+	color:green;
+}
+li:nth-child(even){  /*pares*/
+color:blue;
+}
+
+li:nth-child(5){
+	color:red;
+}
+li:nth-last-child(1){ /*ultimo elemento hacia arriba*/
+	color:yellow;
+}
+
+/*primer y ultimo elemento*/
+
+article:first-child{ /*nth-child(1)*/
+	color:blue;
+}
+article:last-child{
+	color:yellow;
+}
+
+p:first-line{
+	font-weight: bold;
+	text-transform: uppercase;
+}
