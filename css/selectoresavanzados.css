@@ -10,7 +10,7 @@ img[src="img/alerta.png"]{
 }
  /*^ = circunflejo*/
 
- /*Imagen con atriburo src con el inicio de la cadena*/
+ /*Imagen con atributo src con el inicio de la cadena*/
 img[src^="im"]{
 	width: 150px;
 }

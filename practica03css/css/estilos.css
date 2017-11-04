@@ -25,40 +25,61 @@ header nav{
 	color: white;
 	background-color: orange;
 	padding: 10px 0px 10px 0px;
-	border-radius: 5%;
 }
 #seccion1 article{
 	display: inline-block;
 	vertical-align: top;
+
 }
 #seccion1articulo1{
 	width: 60%;
 	margin-left: 10px;
+	border:2px solid black;
 }
 #seccion1articulo2{
 	width: 30%;
 	margin-top: 30px;
-	margin-left: 10px;
+	margin-left: 30px;
 	display: inline-block;
+	border:2px solid black;
 }
 #seccion1articulo2 img{
 	margin-top: 10px;
 	width: 49%;
 	vertical-align: top;
+
 }
 #imgPublicidad{
 	margin-top: 20px;
 }
 
-#seccion2{
-	margin-top: 35px;
+#seccion2 article{
+	display: inline-block;
+	
 }
 #seccion2articulo1{
 	width: 60%;
-	vertical-align: top;
+	border-bottom: 2px solid black;
 }
-.textoTitulo{
-	
-	font-size: 2em;
+#seccion2articulo1  img{ 
+/* utiliza un div en la imagen y texto para colocar 
+la imagen a la izquierda y el texto a la derecha
+*/
+	float:left;
+	vertical-align: text-top;
+	margin-right: 15px;
 }
 
+#seccion2articulo2{
+	margin-left: 45px;
+	width: 30%;
+	border:2px solid red;
+
+}
+.textoTitulo{
+	font-size: 2em;
+}
+span[class="colorMenu"]{
+	padding-left: 15%;
+	padding-right: 15%;
+}

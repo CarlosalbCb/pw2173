@@ -61,7 +61,9 @@ form input[type="button"]{ /*todos los botones dentro del input*/
 .otraSeccion{
 	font-size: 2em;
 }
-.unaSeccion,.otraSeccion{
-	font-weight: bold; /*negritas*/
+#seccion02 span{
+	font-weight: bold;
 }
-
+/*.unaSeccion,.otraSeccion{
+	font-weight: bold; negritas
+}*/
