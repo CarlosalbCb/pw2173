@@ -1,0 +1,8 @@
+body{
+	width:1024px;
+	border: 2px solid black;
+}
+
+section{
+	vertical-align: inline-block;
+}
