@@ -24,12 +24,19 @@ var operadores=function(ope){
 }
 
 var borrar=function(){
-	
+	if(operador="CE"){
+		document.calculadora.operando1.value="";
+		document.calculadora.operando2.value="";
+		document.calculadora.resultado.value="0";
+		operador="";
+		document.calculadora.operando1.focus();
+	}
 }
 
 var igual=function(){
 	if(operador=="+"){
-		var suma=document.calculadora.operando1+document.calculadora.operando2
+		var suma=parseInt(document.calculadora.operando1.value)+parseInt(document.calculadora.operando2.value);
 		document.calculadora.resultado.value=suma;
+
 	}
 }
