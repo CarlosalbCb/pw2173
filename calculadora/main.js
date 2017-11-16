@@ -6,12 +6,13 @@ const url= require('url'); //carga una página
 let PantallaPrincipal;
 
 function muestraPantallaPrincipal(){
-	PantallaPrincipal= new BrowserWindow({width:320,height:425});
+	PantallaPrincipal= new BrowserWindow({width:267,height:250});
 	PantallaPrincipal.loadURL(url.format({
 		pathname: path.join(__dirname,'index.html'),
 		protocol: 'file',
 		slashes: true 
 	}));
+	PantallaPrincipal.webContents.openDevTools();
 	PantallaPrincipal.show();
 };
 

@@ -3,7 +3,6 @@ body{
 	border: 2px solid black;
 	margin: 0 auto;
 	font-size: 16px;
-
 	-webkit-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.75);
 	box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.75);
@@ -57,8 +56,11 @@ input[type="button"]:hover {
   background: #026fb3;
   text-decoration: none;
 }
-
-/*.teclado{
-	width: 200px;
-
-}*/
+#btnCientifica{
+	background: orange;
+	color:black;
+	height: 50px;
+	width: 100px;
+	margin-left: 75px;
+	border-radius: 5px;
+}
