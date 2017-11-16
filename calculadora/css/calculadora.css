@@ -1,0 +1,64 @@
+body{
+	width: 250px;
+	border: 2px solid black;
+	margin: 0 auto;
+	font-size: 16px;
+
+	-webkit-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.75);
+}
+h1{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-size: 1.5em;
+	text-align: center;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
+	background: #7d7e7d; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #7d7e7d 0%, #0e0e0e 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, #7d7e7d 0%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, #7d7e7d 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+form{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ed3700+0,cc0000+100 */
+	background: #ed3700; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #ed3700 0%, #cc0000 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #ed3700 0%,#cc0000 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #ed3700 0%,#cc0000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed3700', endColorstr='#cc0000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	padding-left: 10px;
+}
+form table{
+	width:100%;
+}
+form table tr td{
+	width: 24%;
+}
+
+input[type="text"]{
+	width: 100%;
+	text-align: right;
+}
+
+input[type="button"]{
+	display: block;
+	text-align: center;
+	-webkit-border-radius: 13;
+	-moz-border-radius: 13;
+	border-radius: 13px;
+	background: #0096fa;
+	padding: 10px 20px 10px 20px;
+	border: solid #ffffff 2px;
+	text-decoration: none;
+}
+input[type="button"]:hover {
+  background: #026fb3;
+  text-decoration: none;
+}
+
+/*.teclado{
+	width: 200px;
+
+}*/
