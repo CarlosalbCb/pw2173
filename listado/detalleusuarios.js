@@ -9,6 +9,7 @@ const botonPDF= document.getElementById('btnPDF');
 
 //Activamos el evento click del boton btnPDF
 botonPDF.addEventListener('click', function(event){
+	botonPDF.style.display="none"  //desaparece el boton antes de imprimir
 	ipc.send('print-to-pdf')
 });
 
