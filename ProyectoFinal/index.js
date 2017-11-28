@@ -5,28 +5,22 @@ const url= require('url'); //carga una página
 const $ = require('jquery');  //el simbolo $ indica el inicio de un jquery
 //let PantallaDetalle; 
 
+const botonEntrar = document.getElementById('btnEntrar');
+var usuario= document.getElementById('usuario');
+var contrasena= document.getElementById('contrasena');
+
+botonEntrar.addEventListener('click',function(event){
+	//console.log("click");
+	
+});
+
 
 function inicia(){
 	$.ajax({
 		url: 'http://itculiacan.edu.mx/dadm/apipaselista/data/validausuario.php?usuario=920&clave=12345678',
 		dataType: 'json',
 		success: function(data) {
-			var resultado="";
-			var nombre="";
-			var genero="";
-			var direccion="";
-			var telefono="";
-			var foto="";
-			for(var i=0;i<20;i++){
-				nombre= data.results[i].name.first+" "+data.results[i].name.last;
-				genero= data.results[i].gender;
-				direccion=data.results[i].location.street;
-				telefono= data.results[i].phone;
-				foto = data.results[i].picture.medium;
-				resultado="<li><img src="+foto+">"+nombre+"<button id='"+i+"'>Detalle</button></li>";
-				$("#lstUsuarios").append(resultado);
-				usuarios[i]= new datos(nombre,genero,foto,direccion,telefono);
-			}
+			console.log(data)
 		}
 	});
 }
