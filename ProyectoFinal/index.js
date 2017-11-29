@@ -15,13 +15,12 @@ function datos(usuariovalida,periodoactual){
 }
 
 botonEntrar.addEventListener('click',function(event){
-	//console.log("click");
 	$.ajax({
 		url: 'http://itculiacan.edu.mx/dadm/apipaselista/data/validausuario.php?usuario='+$("#usuario").val()+'&clave='+$("#contrasena").val(),
 		dataType: 'json',
 		success: function(data){
 			if(data.respuesta == true){
-				console.log("click");
+				console.log("Usuario Valido");
 			}
 			else{
 				console.log("usuario invalido")
