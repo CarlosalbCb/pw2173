@@ -9,18 +9,24 @@ const botonEntrar = document.getElementById('btnEntrar');
 var usuario= document.getElementById('usuario');
 var contrasena= document.getElementById('contrasena');
 
+function datos(usuariovalida,periodoactual){
+	this.usuariovalida = usuariovalida;
+	this.periodoactual = periodoactual;
+}
+
 botonEntrar.addEventListener('click',function(event){
 	//console.log("click");
+	$.ajax({
+		url: 'http://itculiacan.edu.mx/dadm/apipaselista/data/validausuario.php?usuario='+$("#usuario").val()+'&clave='+$("#contrasena").val(),
+		dataType: 'json',
+		success: function(data){
+			if(data.respuesta == true){
+				console.log("click");
+			}
+			else{
+				console.log("usuario invalido")
+			}
+		}
+	})
 	
 });
-
-
-function inicia(){
-	$.ajax({
-		url: 'http://itculiacan.edu.mx/dadm/apipaselista/data/validausuario.php?usuario=920&clave=12345678',
-		dataType: 'json',
-		success: function(data) {
-			console.log(data)
-		}
-	});
-}

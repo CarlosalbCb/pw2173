@@ -16,11 +16,8 @@ let PantallaPrincipal;
 
 //objeto global para compartir datos entre pantallas
 global.infoUsuarios = {
-	nombre: '',
-	genero: '',
-	foto: '',
-	direccion: '',
-	telefono: ''
+	usuariovalida: '',
+	periodoactual: ''
 }
 
 function muestraPantallaPrincipal(){
