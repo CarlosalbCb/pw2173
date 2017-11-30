@@ -9,12 +9,9 @@ const botonEntrar = document.getElementById('btnEntrar');
 var usuario= document.getElementById('usuario');
 var contrasena= document.getElementById('contrasena');
 
-function datos(usuariovalida,periodoactual){
-	this.usuariovalida = usuariovalida;
-	this.periodoactual = periodoactual;
-}
 
 botonEntrar.addEventListener('click',function(event){
+	require('electron').remote.getGlobal('infoUsuarios').nombre;
 	$.ajax({
 		url: 'http://itculiacan.edu.mx/dadm/apipaselista/data/validausuario.php?usuario='+$("#usuario").val()+'&clave='+$("#contrasena").val(),
 		dataType: 'json',
