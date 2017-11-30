@@ -39,16 +39,6 @@ function inicia(){
 				usuarios[i]= new datos(nombre,genero,foto,direccion,telefono);
 			}
 			
-
-
-		  	// $("#nombre").html("Nombre: "+data.results[0].name.first+" "+data.results[0].name.last);
-		  	// $("#genero").html("Genero: "+data.results[0].gender);
-		  	// $("#foto").attr("src",data.results[0].picture.large);
-		  	// $("#domicilio").html("Domicilio: "+data.results[0].location.street+", "+
-		  	// 	data.results[0].location.city+" "+data.results[0].location.state+", CP:"+data.results[0].location.postcode);
-		  	// $("#email").html("Email: "+data.results[0].email);
-		  	// $("#tel").html("Telefono: "+data.results[0].phone);
-		  	// $("#cell").html("Celular: "+data.results[0].cell);
 		}
 	});
 }

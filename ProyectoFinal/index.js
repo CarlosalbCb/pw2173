@@ -3,16 +3,12 @@ const app= require('electron').app;
 const path=require('path'); //muestra la ruta del archivo 
 const url= require('url'); //carga una página
 const $ = require('jquery');  //el simbolo $ indica el inicio de un jquery
-//let PantallaDetalle; 
+
 
 const botonEntrar = document.getElementById('btnEntrar');
 var usuario= document.getElementById('usuario');
 var contrasena= document.getElementById('contrasena');
-
-function datos(usuariovalida,periodoactual){
-	this.usuariovalida = usuariovalida;
-	this.periodoactual = periodoactual;
-}
+let PantallaGrupos;
 
 botonEntrar.addEventListener('click',function(event){
 	$.ajax({
@@ -21,11 +17,32 @@ botonEntrar.addEventListener('click',function(event){
 		success: function(data){
 			if(data.respuesta == true){
 				console.log("Usuario Valido");
+/////////////////Asignamos los tokens usuario, usuariovalida y periodo actual a las variables globales para su futuro uso./////////////////////////////
+				require('electron').remote.getGlobal('infoUsuarios').usuario = $("#usuario").val();
+				require('electron').remote.getGlobal('infoUsuarios').usuariovalida = data.usuariovalida;
+				require('electron').remote.getGlobal('infoUsuarios').periodoactual = data.periodoactual;
+
+				//console.log(require('electron').remote.getGlobal('infoUsuarios').usuario);
+				//console.log(require('electron').remote.getGlobal('infoUsuarios').usuariovalida);
+				//console.log(require('electron').remote.getGlobal('infoUsuarios').periodoactual);
+				usuarioAceptado();
 			}
 			else{
-				console.log("usuario invalido")
+				alert("Usuario o contraseña incorrectos");
 			}
 		}
 	})
 	
 });
+
+
+function usuarioAceptado(){
+	PantallaGrupos= new BrowserWindow({width:320,height:425});
+	PantallaGrupos.loadURL(url.format({
+		pathname: path.join(__dirname,'pantallaGrupos.html'),
+		protocol:'file', 
+		slashes:true
+	}));
+	PantallaGrupos.webContents.openDevTools();
+	PantallaGrupos.show();
+}
