@@ -16,6 +16,7 @@ let PantallaPrincipal;
 
 //objeto global para compartir datos entre pantallas
 global.infoUsuarios = {
+	usuario: '',
 	usuariovalida: '',
 	periodoactual: ''
 }
