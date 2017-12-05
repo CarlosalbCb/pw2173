@@ -13,7 +13,7 @@ var inicia = function(){
 			data:parametros,
 			success:function(data){
 				if(data.respuesta){
-					alert("bienvenido");
+					alert("bienvenido "+data.nombre);
 				}else{
 					alert("usuario y/o clave incorrectos");
 				}
