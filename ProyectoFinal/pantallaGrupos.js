@@ -8,6 +8,8 @@ const usuario = require('electron').remote.getGlobal('infoUsuarios').usuario;
 const usuariovalida = require('electron').remote.getGlobal('infoUsuarios').usuariovalida;
 const periodoactual = require('electron').remote.getGlobal('infoUsuarios').periodoactual;
 
+let PantallaAlumnos;
+
 var grupos = new Array();
 
 function datos(clavemateria,grupo,materia,horalunes,horamartes,horamiercoles,horajueves,horaviernes){
@@ -49,8 +51,9 @@ function cargaGrupos(){
 					horajueves =data.grupos[i].horajueves;
 					horaviernes =data.grupos[i].horaviernes;
 					//AQUI DEBE COLOCARSE EL HTML QUE GENERE EL GRUPO 
-					resultado = "Materia"+materia+"   Clavemateria"+clavemateria;
-					console.log(resultado);
+					resultado = "<tr><td>"+clavemateria+"</td><td>"+materia+"</td><td><button id='"+(i-1)+"'>Ir</button></td></tr>";
+					//console.log(resultado);
+					$("#lstMaterias").append(resultado);
 					grupos[(i-1)] = new datos(clavemateria,grupo,materia,horalunes,horamartes,horamiercoles,horajueves,horaviernes);
 					
 				}
@@ -64,5 +67,21 @@ function cargaGrupos(){
 	});
 }
 
+function botonIr(){
+
+	//modificar para que envie el codigo de la materia seleccionada this.id es el indice del botón//
+	require('electron').remote.getGlobal('infoUsuarios').nombre=usuarios[this.id].nombre;
+	require('electron').remote.getGlobal('infoUsuarios').genero=usuarios[this.id].genero;
+//---------------------------------------------------------------------------------------------------//
+
+	PantallaAlumnos= new BrowserWindow({width:320,height:425});
+	PantallaAlumnos.loadURL(url.format({
+		pathname: path.join(__dirname,'pantallaAlumnos.html'),
+		protocol:'file', 
+		slashes:true
+	}));
+	PantallaAlumnos.show();
+}
+$("body").on("click","td > button", botonIr);
 
 cargaGrupos();
