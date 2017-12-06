@@ -13,7 +13,8 @@ var inicia = function(){
 			data:parametros,
 			success:function(data){
 				if(data.respuesta){
-					alert("bienvenido "+data.nombre);
+					//alert("bienvenido "+data.nombre);
+					$("main").load("menu.html");
 				}else{
 					alert("usuario y/o clave incorrectos");
 				}
