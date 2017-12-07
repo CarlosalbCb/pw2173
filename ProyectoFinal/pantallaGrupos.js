@@ -70,8 +70,8 @@ function cargaGrupos(){
 function botonIr(){
 
 	//modificar para que envie el codigo de la materia seleccionada this.id es el indice del botón//
-	require('electron').remote.getGlobal('infoUsuarios').nombre=usuarios[this.id].nombre;
-	require('electron').remote.getGlobal('infoUsuarios').genero=usuarios[this.id].genero;
+	//require('electron').remote.getGlobal('infoUsuarios').nombre=usuarios[this.id].nombre;
+	//require('electron').remote.getGlobal('infoUsuarios').genero=usuarios[this.id].genero;
 //---------------------------------------------------------------------------------------------------//
 
 	PantallaAlumnos= new BrowserWindow({width:320,height:425});
