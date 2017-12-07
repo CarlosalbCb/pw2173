@@ -20,6 +20,10 @@ global.infoUsuarios = {
 	usuariovalida: '',
 	periodoactual: ''
 }
+global.infoGrupos = {
+	clavemateria: '',
+	grupo: ''
+}
 
 function muestraPantallaPrincipal(){
 	PantallaPrincipal= new BrowserWindow({width:400,height:400});

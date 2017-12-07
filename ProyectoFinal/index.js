@@ -25,9 +25,6 @@ botonEntrar.addEventListener('click',function(event){
 				require('electron').remote.getGlobal('infoUsuarios').usuariovalida = data.usuariovalida;
 				require('electron').remote.getGlobal('infoUsuarios').periodoactual = data.periodoactual;
 
-				//console.log(require('electron').remote.getGlobal('infoUsuarios').usuario);
-				//console.log(require('electron').remote.getGlobal('infoUsuarios').usuariovalida);
-				//console.log(require('electron').remote.getGlobal('infoUsuarios').periodoactual);
 				usuarioAceptado();
 			}
 			else{

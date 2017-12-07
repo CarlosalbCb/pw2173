@@ -1,6 +1,6 @@
 const {BrowserWindow}= require('electron').remote;
 const app= require('electron').app;
-/*const path=require('path'); //muestra la ruta del archivo 
+const path=require('path'); //muestra la ruta del archivo 
 const url= require('url'); //carga una página*/
 const $ = require('jquery');  //el simbolo $ indica el inicio de un jquery
 
@@ -61,17 +61,18 @@ function cargaGrupos(){
 			else{
 				console.log("grupos no cargados");
 			}
-
-			//console.log(grupos[0].materia);
 		}
 	});
 }
 
 function botonIr(){
 
-	//modificar para que envie el codigo de la materia seleccionada this.id es el indice del botón//
-	//require('electron').remote.getGlobal('infoUsuarios').nombre=usuarios[this.id].nombre;
-	//require('electron').remote.getGlobal('infoUsuarios').genero=usuarios[this.id].genero;
+	//envia el codigo de la materia seleccionada this.id es el indice del botón//
+
+	require('electron').remote.getGlobal('infoGrupos').clavemateria= grupos[this.id].clavemateria; 
+	console.log(require('electron').remote.getGlobal('infoGrupos').clavemateria);
+	require('electron').remote.getGlobal('infoGrupos').grupo= grupos[this.id].grupo;
+	console.log(require('electron').remote.getGlobal('infoGrupos').grupo);
 //---------------------------------------------------------------------------------------------------//
 
 	PantallaAlumnos= new BrowserWindow({width:320,height:425});
@@ -80,6 +81,7 @@ function botonIr(){
 		protocol:'file', 
 		slashes:true
 	}));
+	PantallaAlumnos.webContents.openDevTools();
 	PantallaAlumnos.show();
 }
 $("body").on("click","td > button", botonIr);
