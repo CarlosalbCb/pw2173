@@ -43,6 +43,6 @@ function usuarioAceptado(){
 		protocol:'file', 
 		slashes:true
 	}));
-	PantallaGrupos.webContents.openDevTools();
+	//PantallaGrupos.webContents.openDevTools();
 	PantallaGrupos.show();
 }

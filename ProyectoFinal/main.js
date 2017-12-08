@@ -32,7 +32,7 @@ function muestraPantallaPrincipal(){
 		protocol: 'file',
 		slashes: true 
 	}));
-	PantallaPrincipal.webContents.openDevTools();   //Linea para herramientas de desarrollador(consola que muestra errores)
+	//PantallaPrincipal.webContents.openDevTools();   //Linea para herramientas de desarrollador(consola que muestra errores)
 	PantallaPrincipal.show();
 }
 // evento para PDF (declaración)
