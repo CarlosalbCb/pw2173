@@ -1,0 +1,35 @@
+body{
+	background-color:#e0eff9;
+	text-align:center;
+	margin:0 auto;
+	    display:inline;
+     padding-left:3px;
+     padding-right:3px;
+     font-family: arial;
+
+}
+
+#lstAlumnos {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color:white;
+    color: black;
+
+
+}
+h1{
+	text-shadow: #555 2px 2px 3px;
+}
+#lstAlumnos tr:nth-child(even){background-color: #c1bfea;}
+
+#lstAlumnos tr:hover {background-color: #49a5bf;}
+
+#lstAlumnos{
+	border: 1px solid black;
+    margin: 25px 50px 75px 270px;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
