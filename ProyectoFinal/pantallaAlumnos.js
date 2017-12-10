@@ -60,4 +60,40 @@ function cargaAlumnos(){
 	});
 }
 
+function botonIr(){
+	if(this.id.indexOf('A')==0){
+		var id = this.id.substr(1);
+		$.ajax({
+			url: 'http://itculiacan.edu.mx/dadm/apipaselista/data/asignaincidencia.php?usuario='+usuario+'&usuariovalida='+usuariovalida+'&periodoactual='+periodoactual+'&materia='+clavemateria+'&grupo='+grupo+'&ncontrol='+alumnos[id].ncontrol+'&incidencia=1',
+			dataType: 'json',
+			success: function(data){
+				if(data.respuesta == true){
+					console.log(alumnos[id].ncontrol);
+					console.log("asistencia");
+				}
+				else{
+					console.log("No se pudo comunicar con el servidor");
+				}
+			}
+		});
+	}else{
+		var id = this.id.substr(1);
+		$.ajax({
+			url: 'http://itculiacan.edu.mx/dadm/apipaselista/data/asignaincidencia.php?usuario='+usuario+'&usuariovalida='+usuariovalida+'&periodoactual='+periodoactual+'&materia='+clavemateria+'&grupo='+grupo+'&ncontrol='+alumnos[id].ncontrol+'&incidencia=2',
+			dataType: 'json',
+			success: function(data){
+				if(data.respuesta == true){
+					console.log(alumnos[id].ncontrol);
+					console.log("falta");
+				}
+				else{
+					console.log("No se pudo comunicar con el servidor");
+				}
+			}
+		});
+	}
+}
+
+$("body").on("click","td > button", botonIr);
+
 cargaAlumnos();
