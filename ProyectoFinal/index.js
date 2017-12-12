@@ -37,7 +37,7 @@ botonEntrar.addEventListener('click',function(event){
 
 
 function usuarioAceptado(){
-	PantallaGrupos= new BrowserWindow({width:320,height:425});
+	PantallaGrupos= new BrowserWindow({width:400,height:425});
 	PantallaGrupos.loadURL(url.format({
 		pathname: path.join(__dirname,'pantallaGrupos.html'),
 		protocol:'file', 

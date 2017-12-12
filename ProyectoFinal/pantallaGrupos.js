@@ -4,9 +4,12 @@ const path=require('path'); //muestra la ruta del archivo
 const url= require('url'); //carga una página*/
 const $ = require('jquery');  //el simbolo $ indica el inicio de un jquery
 
+const ipc=require('electron').ipcRenderer
+
 const usuario = require('electron').remote.getGlobal('infoUsuarios').usuario;
 const usuariovalida = require('electron').remote.getGlobal('infoUsuarios').usuariovalida;
 const periodoactual = require('electron').remote.getGlobal('infoUsuarios').periodoactual;
+const botonPDF = document.getElementById('btnPDF');
 
 let PantallaAlumnos;
 
@@ -66,24 +69,27 @@ function cargaGrupos(){
 }
 
 function botonIr(){
-
 	//envia el codigo de la materia seleccionada this.id es el indice del botón//
-
 	require('electron').remote.getGlobal('infoGrupos').clavemateria= grupos[this.id].clavemateria; 
-	console.log(require('electron').remote.getGlobal('infoGrupos').clavemateria);
 	require('electron').remote.getGlobal('infoGrupos').grupo= grupos[this.id].grupo;
-	console.log(require('electron').remote.getGlobal('infoGrupos').grupo);
 //---------------------------------------------------------------------------------------------------//
 
-	PantallaAlumnos= new BrowserWindow({width:320,height:425});
+	PantallaAlumnos= new BrowserWindow({width:800,height:425});
 	PantallaAlumnos.loadURL(url.format({
 		pathname: path.join(__dirname,'pantallaAlumnos.html'),
 		protocol:'file', 
 		slashes:true
 	}));
-	PantallaAlumnos.webContents.openDevTools();
+	//PantallaAlumnos.webContents.openDevTools();
 	PantallaAlumnos.show();
 }
 $("body").on("click","td > button", botonIr);
 
+
 cargaGrupos();
+
+botonPDF.addEventListener('click',function(event){
+	botonPDF.style.display="none"  //desaparece el boton antes de imprimir
+	ipc.send('print-to-pdf')
+	PantallaAlumnos.show();
+});

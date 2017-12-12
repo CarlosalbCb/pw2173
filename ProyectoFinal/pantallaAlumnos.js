@@ -3,7 +3,8 @@ const app= require('electron').app;
 const path=require('path'); //muestra la ruta del archivo 
 const url= require('url'); //carga una página*/
 const $ = require('jquery');  //el simbolo $ indica el inicio de un jquery
-
+const ipc=require('electron').ipcRenderer
+const botonPDF = document.getElementById('btnPDF');
 const usuario = require('electron').remote.getGlobal('infoUsuarios').usuario;
 const usuariovalida = require('electron').remote.getGlobal('infoUsuarios').usuariovalida;
 const periodoactual = require('electron').remote.getGlobal('infoUsuarios').periodoactual;
@@ -97,3 +98,9 @@ function botonIr(){
 $("body").on("click","td > button", botonIr);
 
 cargaAlumnos();
+
+botonPDF.addEventListener('click',function(event){
+	botonPDF.style.display="none"  //desaparece el boton antes de imprimir
+	ipc.send('print-to-pdf')
+	PantallaAlumnos.show();
+});

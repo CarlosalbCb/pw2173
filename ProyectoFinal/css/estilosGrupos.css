@@ -2,21 +2,27 @@ body{
 	background-color:#e0eff9;
 	text-align:center;
 	margin:0 auto;
-	 display:inline;
-     padding-left:3px;
-     padding-right:3px;
-     font-family: arial;
+    padding-left:3px;
+    padding-right:3px;
+    font-family: arial;
+    
 }
 
 h1{
 	text-shadow: #555 2px 2px 3px;
 }
-#lstMaterias {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
+#materias{
+    border: 1px solid white;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#lstMaterias { 
     background-color:white;
     color: black;
+    border:2px solid black;
+
+    
 }
 
 
@@ -30,5 +36,5 @@ th, td {
 }
 #lstMaterias{
 	border: 1px solid black;
-    margin: 100px 200px 150px 600px;
+    margin: 0 10px 0 10px;*/
 }
