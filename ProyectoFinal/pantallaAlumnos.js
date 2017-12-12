@@ -71,9 +71,13 @@ function botonIr(){
 				if(data.respuesta == true){
 					console.log(alumnos[id].ncontrol);
 					console.log("asistencia");
+					document.getElementById('A'+id).style.background="green";
+					document.getElementById('F'+id).disabled=true;
+
 				}
 				else{
 					console.log("No se pudo comunicar con el servidor");
+					
 				}
 			}
 		});
@@ -86,6 +90,8 @@ function botonIr(){
 				if(data.respuesta == true){
 					console.log(alumnos[id].ncontrol);
 					console.log("falta");
+					document.getElementById('F'+id).style.background="red";
+					document.getElementById('A'+id).disabled=true;
 				}
 				else{
 					console.log("No se pudo comunicar con el servidor");
