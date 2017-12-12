@@ -34,3 +34,9 @@ th, td {
     text-align: left;
     padding: 8px;
 }
+
+#btnPDF{
+    margin-top: 10px;
+    border-radius: 4px;
+    height: 30px;
+}

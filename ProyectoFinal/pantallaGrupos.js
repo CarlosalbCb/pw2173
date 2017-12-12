@@ -54,7 +54,7 @@ function cargaGrupos(){
 					horajueves =data.grupos[i].horajueves;
 					horaviernes =data.grupos[i].horaviernes;
 					//AQUI DEBE COLOCARSE EL HTML QUE GENERE EL GRUPO 
-					resultado = "<tr><td>"+clavemateria+"</td><td>"+materia+"</td><td><button id='"+(i-1)+"'>Ir</button></td></tr>";
+					resultado = "<tr><td>"+clavemateria+"</td><td>"+materia+"</td><td>"+horalunes+"</td><td><button id='"+(i-1)+"'>Ir</button></td></tr>";
 					//console.log(resultado);
 					$("#lstMaterias").append(resultado);
 					grupos[(i-1)] = new datos(clavemateria,grupo,materia,horalunes,horamartes,horamiercoles,horajueves,horaviernes);

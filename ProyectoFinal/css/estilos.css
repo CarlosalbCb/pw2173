@@ -2,17 +2,19 @@ body{
 	background-color:#e0eff9;
 	text-align:center;
 	margin:0 auto;
+	font-size: 16px;
 }
 h1{
 	text-shadow: #555 2px 2px 3px;
 }
 
-#usuario{
-	border-radius: 4px
+#usuario,#contrasena{
+	border-radius: 4px;
+	width: 200px;
 }
-#contrasena{
-	border-radius: 4px
-}
+
 #btnEntrar{
-	border-radius: 4px
+	margin-top: 10px;
+	border-radius: 4px;
+	height: 30px;
 }
